@@ -1,0 +1,6 @@
+{
+    "name": "joseraul/alpha-vantage-api",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0"
+    }
+}
