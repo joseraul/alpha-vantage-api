@@ -14,6 +14,12 @@ abstract class ResourceAbstract
     protected $api_key;
     protected $base_url = 'https://www.alphavantage.co/query';
 
+    /**
+     * ResourceAbstract constructor.
+     *
+     * @param $api_key
+     * @param null $http_client
+     */
     public function __construct($api_key, $http_client = null)
     {
         if(is_null($http_client)) {
@@ -23,6 +29,12 @@ abstract class ResourceAbstract
         $this->api_key = $api_key;
     }
 
+    /**
+     * Perform a GET call to the API with $parameters.
+     *
+     * @param $parameters
+     * @return mixed
+     */
     protected function get($parameters)
     {
         $response = $this->http_client->get($this->base_url, [
@@ -32,6 +44,12 @@ abstract class ResourceAbstract
         return $this->filterResponse($response);
     }
 
+    /**
+     * Filter the response, try to maintain the original format.
+     *
+     * @param \GuzzleHttp\Psr7\Response $response
+     * @return mixed
+     */
     protected function filterResponse(\GuzzleHttp\Psr7\Response $response)
     {
         return json_decode($response->getBody()->getContents(), true);
