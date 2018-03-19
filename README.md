@@ -1,7 +1,7 @@
-# alpha-vantage-api
-Alpha Vantage API Client
+# Alpha Vantage API Client
+Not official PHP Client for the Alpha Vantage service. 
 
-# Example of use
+## Example of use
 ```
 use AlphaVantage\Client;
 
