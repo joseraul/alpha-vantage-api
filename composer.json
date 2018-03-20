@@ -1,6 +1,8 @@
 {
   "name": "joseraul/alpha-vantage-api",
   "version": "0.0.1",
+  "license": "MIT",
+  "description": "Framework agnostic PHP client for the Alpha Vantage service",
   "authors": [
     {
       "name": "Jose Raul Perez",
