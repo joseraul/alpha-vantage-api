@@ -1,12 +1,21 @@
 {
-    "name": "joseraul/alpha-vantage-api",
-    "require": {
-        "guzzlehttp/guzzle": "~6.0"
-    },
-    "autoload": {
-        "psr-4": {"AlphaVantage\\": "src/"}
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^7"
+  "name": "joseraul/alpha-vantage-api",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Jose Raul Perez",
+      "email": "joseraul.perezfrias@gmail.com"
     }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AlphaVantage\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
+  }
 }
