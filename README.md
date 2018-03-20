@@ -3,6 +3,9 @@
 # Alpha Vantage API Client
 Not official PHP Client for the Alpha Vantage service. 
 
+## Installation
+```composer require joseraul/alpha-vantage-api```
+
 ## Example of use
 ```
 use AlphaVantage\Client;
