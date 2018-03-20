@@ -1,6 +1,7 @@
+[![Build Status](https://travis-ci.org/joseraul/alpha-vantage-api.svg?branch=master)](https://travis-ci.org/joseraul/alpha-vantage-api)
+
 # Alpha Vantage API Client
 Not official PHP Client for the Alpha Vantage service. 
-[![Build Status](https://travis-ci.org/joseraul/alpha-vantage-api.svg?branch=master)](https://travis-ci.org/joseraul/alpha-vantage-api)
 
 ## Example of use
 ```

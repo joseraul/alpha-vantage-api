@@ -47,10 +47,10 @@ abstract class ResourceAbstract
     /**
      * Filter the response, try to maintain the original format.
      *
-     * @param \GuzzleHttp\Psr7\Response $response
+     * @param \Psr\Http\Message\ResponseInterface
      * @return mixed
      */
-    protected function filterResponse(\GuzzleHttp\Psr7\Response $response)
+    protected function filterResponse(\Psr\Http\Message\ResponseInterface $response)
     {
         return json_decode($response->getBody()->getContents(), true);
     }

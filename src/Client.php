@@ -13,11 +13,14 @@ use AlphaVantage\Resources\Stock;
  */
 class Client
 {
-    const INTRADAY = 'TIME_SERIES_INTRADAY';
-    const DAILY = 'TIME_SERIES_DAILY';
-
     private $stock_client;
 
+    /**
+     * Client constructor.
+     *
+     * @param $api_key
+     * @param Stock|null $stock_client
+     */
     public function __construct($api_key, Stock $stock_client = null)
     {
         if (is_null($stock_client)) {
@@ -26,6 +29,11 @@ class Client
         $this->stock_client = $stock_client;
     }
 
+    /**
+     * Return the stock resource.
+     *
+     * @return Stock
+     */
     public function stock()
     {
         return $this->stock_client;

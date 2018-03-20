@@ -17,6 +17,16 @@ class Stock extends ResourceAbstract
     const OUTPUT_COMPACT = 'compact';
     const OUTPUT_FULL = 'full';
 
+    /**
+     * Make a call to the intraday resource.
+     * https://www.alphavantage.co/documentation/#intraday
+     *
+     * @param string $symbol
+     * @param string $interval
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
     public function intraday($symbol, $interval, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_JSON)
     {
         return $this->get([
@@ -29,6 +39,15 @@ class Stock extends ResourceAbstract
         ]);
     }
 
+    /**
+     * Make a call to the daily resource.
+     * https://www.alphavantage.co/documentation/#daily
+     *
+     * @param string $symbol
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
     public function daily($symbol, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_CSV)
     {
         return $this->get([
@@ -40,6 +59,15 @@ class Stock extends ResourceAbstract
         ]);
     }
 
+    /**
+     * Make a call to the daily adjusted resource.
+     * https://www.alphavantage.co/documentation/#dailyadj
+     *
+     * @param $symbol
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
     public function dailyAdjusted($symbol, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_CSV)
     {
         return $this->get([
