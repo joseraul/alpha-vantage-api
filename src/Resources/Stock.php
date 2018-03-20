@@ -78,4 +78,84 @@ class Stock extends ResourceAbstract
             'apikey' => $this->api_key,
         ]);
     }
+
+    /**
+     * Make a call to the weekly resource.
+     * https://www.alphavantage.co/documentation/#weekly
+     *
+     * @param $symbol
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
+    public function weekly($symbol, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_CSV)
+    {
+        return $this->get([
+            'function' => 'TIME_SERIES_WEEKLY',
+            'symbol' => $symbol,
+            'outputsize' => $output_size,
+            'datatype' => $data_type,
+            'apikey' => $this->api_key,
+        ]);
+    }
+
+    /**
+     * Make a call to the weekly adjusted resource.
+     * https://www.alphavantage.co/documentation/#weeklyadj
+     *
+     * @param $symbol
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
+    public function weeklyAdjusted($symbol, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_CSV)
+    {
+        return $this->get([
+            'function' => 'TIME_SERIES_WEEKLY_ADJUSTED',
+            'symbol' => $symbol,
+            'outputsize' => $output_size,
+            'datatype' => $data_type,
+            'apikey' => $this->api_key,
+        ]);
+    }
+
+    /**
+     * Make a call to the monthly resource.
+     * https://www.alphavantage.co/documentation/#monthly
+     *
+     * @param $symbol
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
+    public function monthly($symbol, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_CSV)
+    {
+        return $this->get([
+            'function' => 'TIME_SERIES_MONTHLY',
+            'symbol' => $symbol,
+            'outputsize' => $output_size,
+            'datatype' => $data_type,
+            'apikey' => $this->api_key,
+        ]);
+    }
+
+    /**
+     * Make a call to the monthly adjusted resource.
+     * https://www.alphavantage.co/documentation/#monthlyadj
+     *
+     * @param $symbol
+     * @param string $output_size
+     * @param string $data_type
+     * @return mixed
+     */
+    public function monthlyAdjusted($symbol, $output_size = self::OUTPUT_COMPACT, $data_type = self::DATA_TYPE_CSV)
+    {
+        return $this->get([
+            'function' => 'TIME_SERIES_MONTHLY_ADJUSTED',
+            'symbol' => $symbol,
+            'outputsize' => $output_size,
+            'datatype' => $data_type,
+            'apikey' => $this->api_key,
+        ]);
+    }
 }

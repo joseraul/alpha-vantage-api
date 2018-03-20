@@ -39,3 +39,35 @@ $data = $alpha_vantage
     ->stock()
     ->dailyAdjusted('GOOGL');
 ```
+
+#### Weekly
+https://www.alphavantage.co/documentation/#weekly
+```
+$data = $alpha_vantage
+    ->stock()
+    ->weekly('GOOGL');
+```
+
+#### Weekly Adjusted
+https://www.alphavantage.co/documentation/#weeklyadj
+```
+$data = $alpha_vantage
+    ->stock()
+    ->weeklyAdjusted('GOOGL');
+```
+
+#### Monthly
+https://www.alphavantage.co/documentation/#monthly
+```
+$data = $alpha_vantage
+    ->stock()
+    ->monthly('GOOGL');
+```
+
+#### Monthly Adjusted
+https://www.alphavantage.co/documentation/#monthlyadj
+```
+$data = $alpha_vantage
+    ->stock()
+    ->monthlyAdjusted('GOOGL');
+```
