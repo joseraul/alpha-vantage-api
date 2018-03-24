@@ -74,3 +74,14 @@ $data = $alpha_vantage
     ->stock()
     ->monthlyAdjusted('GOOGL');
 ```
+
+### Currency
+https://www.alphavantage.co/documentation/#fx
+
+#### Exchange Rate
+https://www.alphavantage.co/documentation/#currency-exchange
+```
+$data = $alpha_vantage
+    ->currency()
+    ->exchange('BTC', 'USD');
+```
