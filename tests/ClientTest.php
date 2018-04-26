@@ -17,4 +17,11 @@ class ClientTest extends \PHPUnit\Framework\TestCase
         $alpha_vantage_client = new Client('api_key');
         $this->assertEquals('AlphaVantage\Resources\Currency', get_class($alpha_vantage_client->currency()));
     }
+
+    /** @test */
+    public function indicator_function_returns_indicator_resource()
+    {
+        $alpha_vantage_client = new Client('api_key');
+        $this->assertEquals('AlphaVantage\Resources\Indicator', get_class($alpha_vantage_client->indicator()));
+    }
 }
