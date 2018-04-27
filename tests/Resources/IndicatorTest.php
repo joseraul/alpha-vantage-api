@@ -50,4 +50,24 @@ class IndicatorTest extends \PHPUnit\Framework\TestCase
         $response = $indicator_client->wma('fake-symbol', 'fake-interval', 'fake-time-period', 'fake-type');
         $this->assertEquals(['fake-response'], $response);
     }
+
+
+    /** @test */
+    public function sma_method_makes_api_call_with_passed_parameters_and_it_returns_filtered_response()
+    {
+        $response = new Response(200, ['X-Foo' => 'Bar'], json_encode(['fake-response']));
+
+        $http_client_mock = $this->getHttpClientMock([
+            'function' => 'SMA',
+            'symbol' => 'fake-symbol',
+            'interval' => 'fake-interval',
+            'time_period' => 'fake-time-period',
+            'series_type' => 'fake-type',
+            'apikey' => 'fake-api_key',
+        ], $response);
+
+        $indicator_client = new Indicator('fake-api_key', $http_client_mock);
+        $response = $indicator_client->sma('fake-symbol', 'fake-interval', 'fake-time-period', 'fake-type');
+        $this->assertEquals(['fake-response'], $response);
+    }
 }

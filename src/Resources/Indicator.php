@@ -43,4 +43,26 @@ class Indicator extends ResourceAbstract
             'apikey' => $this->api_key,
         ]);
     }
+
+    /**
+     * Make a call to the SMA indicator resource.
+     * https://www.alphavantage.co/documentation/#sma
+     *
+     * @param string $symbol
+     * @param string $interval
+     * @param string $time_period
+     * @param string $series_type
+     * @return mixed
+     */
+    public function sma($symbol, $interval, $time_period, $series_type)
+    {
+        return $this->get([
+            'function' => 'SMA',
+            'symbol' => $symbol,
+            'interval' => $interval,
+            'time_period' => $time_period,
+            'series_type' => $series_type,
+            'apikey' => $this->api_key,
+        ]);
+    }
 }
