@@ -85,3 +85,22 @@ $data = $alpha_vantage
     ->currency()
     ->exchange('BTC', 'USD');
 ```
+
+### Indicators
+https://www.alphavantage.co/documentation/#technical-indicators
+
+#### SMA
+https://www.alphavantage.co/documentation/#sma
+```
+$data = $alpha_vantage
+    ->indicator()
+    ->sma('GOOGL', AlphaVantage\Resources\Indicator::INTERVAL_1MIN, 60, AlphaVantage\Resources\Indicator::SERIES_TYPE_HIGH);
+```
+
+#### WMA
+https://www.alphavantage.co/documentation/#wma
+```
+$data = $alpha_vantage
+    ->indicator()
+    ->wma('GOOGL', AlphaVantage\Resources\Indicator::INTERVAL_1MIN, 60, AlphaVantage\Resources\Indicator::SERIES_TYPE_HIGH);
+```
