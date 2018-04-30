@@ -1,7 +1,13 @@
 [![Build Status](https://travis-ci.org/joseraul/alpha-vantage-api.svg?branch=master)](https://travis-ci.org/joseraul/alpha-vantage-api)
 
 # Alpha Vantage API Client
-Not official PHP Client for the Alpha Vantage service. 
+PHP Client for the [Alpha Vantage](https://www.alphavantage.co/documentation/) service. 
+
+* [Installation](https://github.com/joseraul/alpha-vantage-api#installation)
+* [Resources](https://github.com/joseraul/alpha-vantage-api#resources)
+    * [Stocks](https://github.com/joseraul/alpha-vantage-api#stocks)
+    * [Currencies](https://github.com/joseraul/alpha-vantage-api#currency)
+    * [Indicators](https://github.com/joseraul/alpha-vantage-api#indicators)
 
 ## Installation
 ```composer require joseraul/alpha-vantage-api```
